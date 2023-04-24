@@ -1,22 +1,50 @@
 
 <section class="hero is-white is-fullheight">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.searchform {
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchform:focus{
+  color: #00B4CC;
+}
+
+
+</style>
 
     <div id="particles-js"></div>
 
     <div class="text">
-        <h1>APPLE Search Engine</h1>
+        <h1 style="text-align:center">Apple Search Engine</h1>
     </div>
-
-
-    <div class="hero-body">
+    </br>
+    </br>
+    <div style="text-align:center" class="hero-body">
         <div class="container has-text-centered">
             <div class="columns">
-                <div class="column is-6-desktop is-offset-3-desktop">
+                <div class="column is-6-desktop is-offset-6-desktop">
                     <form action="" method="get">
                         <div class="field">
 
-                            <div class="control has-icons-right">
-                                <input class="input is-medium" type="text" autofocus="true" name="q" id="search-input">
+                            <div class="searchform cf">
+                                <input class="input"  size="80%" style="height:4%;font-size:10pt;" type="text"   autofocus="true" name="q" placeholder="Search ..... " id="search-input">
                                 <div class="output"></div>
                                 <span class="icon is-medium is-right">
                                     <i class="fas fa-search"></i>
@@ -24,6 +52,8 @@
                             </div>
                         </div>
                         <div class="control has-text-centered">
+                            <br></br>
+                            <br></br>
                             <input class="button is-light is-medium" type="submit" value="Search">
                         </div>
                     </form>
@@ -32,6 +62,16 @@
         </div>
     </div>
 
+
+    <ul>
+    {% for i in statuses %}
+       <center>
+           <a href={{ i }}>{{ i }}</a> <br></br>
+       </center>
+    {% endfor %}
+    </ul>
+
+  
 
 
 </section>
